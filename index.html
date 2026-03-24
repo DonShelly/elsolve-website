@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="en-GB">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ELSOLVE — Solutions That Deliver</title>
+    <meta name="description" content="ELSOLVE delivers tailored business solutions with precision and clarity. Strategy, technology, and operations — done right.">
+    <link rel="icon" type="image/svg+xml" href="/favicon.svg">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <nav class="nav">
+        <div class="container nav-inner">
+            <a href="#" class="logo">ELSOLVE</a>
+            <ul class="nav-links">
+                <li><a href="#about">About</a></li>
+                <li><a href="#solutions">Solutions</a></li>
+                <li><a href="#contact">Contact</a></li>
+            </ul>
+            <button class="nav-toggle" aria-label="Menu">
+                <span></span><span></span><span></span>
+            </button>
+        </div>
+    </nav>
+
+    <header class="hero" id="hero">
+        <div class="container">
+            <h1>Solutions that<br>move business forward</h1>
+            <p class="hero-sub">We partner with ambitious companies to solve complex challenges — delivering strategy, technology, and operational excellence with precision.</p>
+            <a href="#contact" class="btn">Get in touch</a>
+        </div>
+    </header>
+
+    <section class="about" id="about">
+        <div class="container">
+            <div class="section-label">About</div>
+            <h2>Built for results</h2>
+            <div class="about-grid">
+                <div class="about-text">
+                    <p>ELSOLVE is a solutions company founded on a simple principle: businesses deserve partners who deliver, not just advise.</p>
+                    <p>We combine strategic thinking with hands-on execution. Whether it's streamlining operations, building technology, or solving the problems that keep leadership up at night — we get it done.</p>
+                    <p>Based in the United Kingdom, we work with companies who value clarity, speed, and measurable outcomes.</p>
+                </div>
+                <div class="about-stats">
+                    <div class="stat">
+                        <span class="stat-icon">◈</span>
+                        <h3>Strategic</h3>
+                        <p>Every engagement starts with understanding the problem — properly.</p>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">◈</span>
+                        <h3>Hands-on</h3>
+                        <p>We don't hand over a deck and walk away. We build alongside you.</p>
+                    </div>
+                    <div class="stat">
+                        <span class="stat-icon">◈</span>
+                        <h3>Outcome-driven</h3>
+                        <p>Success is measured by what changes, not what's presented.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="solutions" id="solutions">
+        <div class="container">
+            <div class="section-label">Solutions</div>
+            <h2>What we do</h2>
+            <div class="solutions-grid">
+                <div class="solution-card">
+                    <div class="solution-number">01</div>
+                    <h3>Business Strategy</h3>
+                    <p>Market analysis, competitive positioning, and growth planning. We help you see the landscape clearly and move with confidence.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">02</div>
+                    <h3>Technology Solutions</h3>
+                    <p>From system architecture to implementation — we build technology that works reliably, scales sensibly, and integrates seamlessly.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">03</div>
+                    <h3>Operations &amp; Process</h3>
+                    <p>Streamlining workflows, eliminating waste, and building processes that make your team faster and more effective.</p>
+                </div>
+                <div class="solution-card">
+                    <div class="solution-number">04</div>
+                    <h3>Digital Transformation</h3>
+                    <p>Modernising legacy systems and practices. We bring clarity to complex transitions and ensure adoption sticks.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section class="contact" id="contact">
+        <div class="container">
+            <div class="section-label">Contact</div>
+            <h2>Let's talk</h2>
+            <p class="contact-sub">Ready to solve something? We'd like to hear from you.</p>
+            <div class="contact-details">
+                <a href="mailto:hello@elsolve.co.uk" class="contact-email">hello@elsolve.co.uk</a>
+            </div>
+            <div class="contact-info">
+                <p>ELSOLVE LTD<br>United Kingdom</p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container footer-inner">
+            <span class="footer-logo">ELSOLVE</span>
+            <span class="footer-copy">&copy; 2026 ELSOLVE LTD. All rights reserved.</span>
+        </div>
+    </footer>
+
+    <script>
+        const toggle = document.querySelector('.nav-toggle');
+        const links = document.querySelector('.nav-links');
+        toggle.addEventListener('click', () => {
+            links.classList.toggle('open');
+            toggle.classList.toggle('open');
+        });
+        document.querySelectorAll('.nav-links a').forEach(a => {
+            a.addEventListener('click', () => {
+                links.classList.remove('open');
+                toggle.classList.remove('open');
+            });
+        });
+        // Subtle nav background on scroll
+        window.addEventListener('scroll', () => {
+            document.querySelector('.nav').classList.toggle('scrolled', window.scrollY > 40);
+        });
+    </script>
+</body>
+</html>
