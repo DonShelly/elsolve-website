@@ -1,4 +1,4 @@
-# elsolve.com
+# elsolve.co.uk
 
 Marketing site for **ELSOLVE** — a consultancy for AI as infrastructure.
 
