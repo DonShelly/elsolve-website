@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 630" width="1200" height="630">
+  <defs>
+    <linearGradient id="paper" x1="0" x2="1" y1="0" y2="1">
+      <stop offset="0%" stop-color="#f6efe0"/>
+      <stop offset="100%" stop-color="#eadfc9"/>
+    </linearGradient>
+  </defs>
+  <rect width="1200" height="630" fill="url(#paper)"/>
+  <g font-family="'Source Serif 4','Source Serif Pro','Hoefler Text',Georgia,serif" fill="#1f1a13">
+    <text x="80" y="120" font-size="22" letter-spacing="6" font-family="'Geist Mono',ui-monospace,monospace" fill="#2f6b5a">§ 00 · ELSOLVE · AI &amp; AGENTIC SYSTEMS CONSULTANCY</text>
+    <text x="80" y="300" font-size="96" font-weight="400" letter-spacing="-3">
+      <tspan x="80" dy="0">We help business owners put</tspan>
+      <tspan x="80" dy="110" font-style="italic" fill="#2f6b5a">AI to work</tspan>
+      <tspan dx="24" font-style="normal" fill="#1f1a13"> in the places that</tspan>
+      <tspan x="80" dy="110">actually move the business forward.</tspan>
+    </text>
+    <text x="80" y="590" font-size="20" letter-spacing="4" font-family="'Geist Mono',ui-monospace,monospace" fill="#5a4f3e">ELSOLVE.COM · EST. 2025 · UNITED KINGDOM</text>
+  </g>
+</svg>

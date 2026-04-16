@@ -1,4 +1,7 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 32 32">
-  <rect width="32" height="32" rx="6" fill="#1a1a2e"/>
-  <text x="16" y="22" text-anchor="middle" font-family="Arial,sans-serif" font-weight="700" font-size="18" fill="#fff">E</text>
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 64 64">
+  <rect width="64" height="64" rx="10" fill="#f3ecdd"/>
+  <g font-family="'Source Serif 4','Source Serif Pro','Hoefler Text',Georgia,serif" font-weight="600">
+    <text x="32" y="48" text-anchor="middle" font-size="52" fill="#211b14" letter-spacing="-1">E</text>
+    <circle cx="52" cy="49" r="4" fill="#2f6b5a"/>
+  </g>
 </svg>
