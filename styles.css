@@ -824,6 +824,164 @@ body {
 }
 
 /* ══════════════════════════════════════════════════════════════
+   LINKS HUB (QR-landing page at /links)
+   ══════════════════════════════════════════════════════════════ */
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.links-main {
+  padding-bottom: clamp(var(--space-8), 10vw, var(--space-10));
+}
+
+.links-hero {
+  padding-top: clamp(var(--space-7), 7vw, var(--space-9));
+  padding-bottom: clamp(var(--space-6), 5vw, var(--space-8));
+}
+.links-display {
+  font-family: var(--ff-serif);
+  font-weight: 400;
+  font-size: clamp(2.2rem, 1.4rem + 3.4vw, 4.2rem);
+  line-height: 1.05;
+  letter-spacing: -0.022em;
+  margin: 0 0 clamp(var(--space-5), 3vw, var(--space-6));
+  color: var(--ink);
+  max-width: 20ch;
+  font-optical-sizing: auto;
+}
+.links-display em {
+  font-style: italic;
+  font-weight: 400;
+  color: var(--accent-ink);
+}
+.links-lede {
+  font-family: var(--ff-serif);
+  font-size: var(--fs-lede);
+  line-height: 1.55;
+  color: var(--ink-2);
+  max-width: 58ch;
+  margin: 0;
+}
+
+.link-tiles {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: clamp(var(--space-3), 1.4vw, var(--space-4));
+  margin-top: clamp(var(--space-5), 3vw, var(--space-6));
+  padding-left: clamp(0px, 5vw, calc(4.5rem + var(--space-7)));
+}
+@media (max-width: 720px) {
+  .link-tiles { grid-template-columns: 1fr; padding-left: 0; }
+}
+
+.link-tile {
+  position: relative;
+  display: grid;
+  grid-template-columns: 1fr auto;
+  grid-template-rows: auto auto auto;
+  column-gap: var(--space-4);
+  row-gap: var(--space-2);
+  padding: clamp(var(--space-5), 2.2vw, var(--space-6)) clamp(var(--space-5), 2.4vw, var(--space-6));
+  background: var(--paper-2);
+  border: 1px solid var(--rule);
+  border-radius: 6px;
+  text-decoration: none;
+  color: var(--ink);
+  transition:
+    background 220ms ease,
+    border-color 220ms ease,
+    transform 180ms cubic-bezier(.2,.7,.2,1),
+    box-shadow 220ms ease;
+}
+.link-tile:hover {
+  background: var(--paper-deep);
+  border-color: var(--rule-strong);
+  transform: translateY(-1px);
+  box-shadow: 0 6px 24px -12px oklch(0.2 0.02 42 / 0.25);
+}
+.link-tile:focus-visible {
+  outline: 2px solid var(--accent-ink);
+  outline-offset: 3px;
+}
+
+.tile-label {
+  grid-column: 1;
+  grid-row: 1;
+  font-family: var(--ff-mono);
+  font-size: var(--fs-micro);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  color: var(--accent-ink);
+}
+.tile-title {
+  grid-column: 1;
+  grid-row: 2;
+  font-family: var(--ff-serif);
+  font-style: italic;
+  font-weight: 500;
+  font-size: clamp(1.25rem, 1.05rem + 0.7vw, 1.6rem);
+  line-height: 1.2;
+  letter-spacing: -0.015em;
+  color: var(--ink);
+}
+.tile-note {
+  grid-column: 1;
+  grid-row: 3;
+  font-family: var(--ff-serif);
+  font-size: var(--fs-small);
+  line-height: 1.5;
+  color: var(--ink-2);
+  max-width: 44ch;
+}
+.tile-arrow {
+  grid-column: 2;
+  grid-row: 1 / 4;
+  align-self: center;
+  font-family: var(--ff-serif);
+  font-size: 1.6rem;
+  line-height: 1;
+  color: var(--ink-3);
+  transition: transform 240ms cubic-bezier(.2,.7,.2,1), color 180ms ease;
+}
+.link-tile:hover .tile-arrow {
+  color: var(--accent-ink);
+  transform: translate(3px, -3px);
+}
+
+.link-tile--primary {
+  background: var(--ink);
+  border-color: var(--ink);
+  color: var(--paper);
+}
+.link-tile--primary .tile-label { color: oklch(0.82 0.02 82); }
+.link-tile--primary .tile-title { color: var(--paper); font-style: italic; }
+.link-tile--primary .tile-note { color: oklch(0.82 0.02 82); }
+.link-tile--primary .tile-arrow { color: oklch(0.82 0.02 82); }
+.link-tile--primary:hover {
+  background: var(--accent-ink);
+  border-color: var(--accent-ink);
+}
+.link-tile--primary:hover .tile-arrow { color: var(--paper); }
+
+.link-tile--accent {
+  background: var(--accent-soft);
+  border-color: oklch(0.82 0.06 163);
+}
+.link-tile--accent .tile-label { color: var(--accent-ink); }
+.link-tile--accent:hover {
+  background: oklch(0.88 0.05 163);
+  border-color: var(--accent-ink);
+}
+
+/* ══════════════════════════════════════════════════════════════
    REVEAL ON SCROLL (progressive enhancement)
    ══════════════════════════════════════════════════════════════ */
 [data-reveal] {

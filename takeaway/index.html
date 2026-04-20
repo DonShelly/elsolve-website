@@ -1,0 +1,374 @@
+<!doctype html>
+<html lang="en-GB">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>OpenClaw 101 — Workshop Takeaway · ELSOLVE</title>
+<meta name="description" content="Everything you need to keep your OpenClaw agent running after the workshop — plus where to take it next.">
+<meta name="theme-color" content="#f3ecdd">
+<meta property="og:title" content="OpenClaw 101 — Workshop Takeaway · ELSOLVE">
+<meta property="og:description" content="Maintenance basics, upgrade paths, and next steps for OpenClaw 101 attendees.">
+<meta property="og:type" content="article">
+<meta property="og:url" content="https://elsolve.co.uk/takeaway">
+<meta property="og:image" content="/og.svg">
+<meta name="twitter:card" content="summary_large_image">
+<link rel="icon" type="image/svg+xml" href="/favicon.svg">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:ital,opsz,wght@0,8..60,300..700;1,8..60,300..600&family=Geist+Mono:wght@400;500&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="/styles.css">
+</head>
+<body>
+<a class="skip" href="#main">Skip to content</a>
+
+<header class="top">
+  <div class="pad top-inner">
+    <a href="/" class="wordmark" aria-label="ELSOLVE">
+      <span class="wordmark-E" aria-hidden="true">E</span><span class="wordmark-rest">lsolve</span>
+      <span class="wordmark-dot" aria-hidden="true">.</span>
+    </a>
+    <nav class="nav" aria-label="Primary">
+      <a href="/#approach">Approach</a>
+      <a href="/#services">Services</a>
+      <a href="/links">Links</a>
+      <a href="/#contact">Contact</a>
+    </nav>
+    <a href="/#contact" class="top-cta"><span class="cta-long">Start a conversation</span><span class="cta-short">Contact</span><span aria-hidden="true">&#8599;</span></a>
+  </div>
+</header>
+
+<main id="main">
+
+<section class="hero pad" aria-labelledby="hero-h">
+  <div class="eyebrow">
+    <span class="eye-mark">&sect;&nbsp;00</span>
+    <span class="eye-label">OpenClaw 101 &middot; Workshop takeaway</span>
+    <span class="eye-loc">For attendees &middot; 2026-04-30</span>
+  </div>
+  <h1 id="hero-h" class="display">
+    <span class="d-line">You built an agent.</span>
+    <span class="d-line"><em>Here&rsquo;s how</em> to keep it</span>
+    <span class="d-line">running &mdash; and make it&nbsp;better.</span>
+  </h1>
+  <div class="hero-foot">
+    <p class="lede">
+      A short, honest follow-up for everyone who spent the afternoon with us building their first
+      OpenClaw agent. The basics to keep it healthy, the upgrade paths worth considering, and the
+      line we draw between what you can ship yourself and what genuinely benefits from a second pair
+      of hands.
+    </p>
+    <div class="hero-meta">
+      <div class="meta-row"><span>Workshop</span><span>OpenClaw 101</span></div>
+      <div class="meta-row"><span>Date</span><span>30 April 2026</span></div>
+      <div class="meta-row"><span>Level</span><span>Intro &rarr; operator</span></div>
+      <div class="meta-row"><span>Read time</span><span>~6 minutes</span></div>
+    </div>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="manifesto pad" aria-labelledby="recap-h">
+  <header class="sec-head" data-reveal>
+    <span class="sec-num">&sect;&nbsp;01</span>
+    <h2 id="recap-h" class="sec-h">What you took home.</h2>
+  </header>
+  <div class="beliefs" data-reveal-stagger>
+    <article class="belief">
+      <span class="b-num">i</span>
+      <p>
+        A working OpenClaw agent with a tool, a session, and a workflow you chose &mdash;
+        not a toy. It already does one useful thing for your business.
+      </p>
+    </article>
+    <article class="belief">
+      <span class="b-num">ii</span>
+      <p>
+        The <em>execution loop</em>: trigger &rarr; context &rarr; plan &rarr; act &rarr; verify.
+        Everything you add later slots into that shape.
+      </p>
+    </article>
+    <article class="belief">
+      <span class="b-num">iii</span>
+      <p>
+        The security posture &mdash; token auth, private binding, fail-closed defaults &mdash;
+        so your agent runs quietly and doesn&rsquo;t become a liability.
+      </p>
+    </article>
+    <article class="belief">
+      <span class="b-num">iv</span>
+      <p>
+        A calibration for <em>when to automate</em>. Most of the value sits in a small number of
+        workflows; the rest is noise. Keep the bar high.
+      </p>
+    </article>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="approach pad" aria-labelledby="operate-h">
+  <header class="sec-head" data-reveal>
+    <span class="sec-num">&sect;&nbsp;02</span>
+    <h2 id="operate-h" class="sec-h">Operate it.</h2>
+  </header>
+
+  <div class="phases" data-reveal-stagger>
+    <article class="phase">
+      <div class="p-head">
+        <span class="p-num">01</span>
+        <h3>Check in weekly</h3>
+      </div>
+      <p>
+        Open the session log, skim the last runs, confirm the trigger fired when it should.
+        Ten minutes is enough. Regressions are usually obvious.
+      </p>
+    </article>
+
+    <article class="phase">
+      <div class="p-head">
+        <span class="p-num">02</span>
+        <h3>Keep tools tidy</h3>
+      </div>
+      <p>
+        Update OpenClaw and your tool bindings on the cadence you&rsquo;re comfortable with.
+        Pin model versions; change them deliberately, not accidentally.
+      </p>
+    </article>
+
+    <article class="phase">
+      <div class="p-head">
+        <span class="p-num">03</span>
+        <h3>Rotate tokens</h3>
+      </div>
+      <p>
+        Every quarter, rotate the auth tokens your agent uses. Revoke anything you don&rsquo;t
+        recognise. Keep the blast radius small and your paper trail clean.
+      </p>
+    </article>
+
+    <article class="phase">
+      <div class="p-head">
+        <span class="p-num">04</span>
+        <h3>Watch one metric</h3>
+      </div>
+      <p>
+        Pick one number the agent should move &mdash; time saved, replies sent, briefs produced &mdash;
+        and track it. If the number stops moving, the agent stopped earning its keep.
+      </p>
+    </article>
+  </div>
+
+  <aside class="pull" data-reveal>
+    <p>
+      Maintenance is not a project. It&rsquo;s a twenty-minute habit that keeps a useful
+      system from quietly becoming a broken one.
+    </p>
+    <p class="pull-attrib">The operator&rsquo;s rule, in one sentence.</p>
+  </aside>
+</section>
+
+<hr class="rule">
+
+<section class="services pad" aria-labelledby="upgrade-h">
+  <header class="sec-head" data-reveal>
+    <span class="sec-num">&sect;&nbsp;03</span>
+    <h2 id="upgrade-h" class="sec-h">Where to take it next.</h2>
+  </header>
+
+  <ol class="service-list" role="list" data-reveal-stagger>
+    <li class="svc">
+      <div class="svc-num">01</div>
+      <div class="svc-body">
+        <h3 class="svc-title">Add a second workflow</h3>
+        <p class="svc-copy">
+          The first agent paid for itself. The second one compounds. Pick a different shape of
+          work &mdash; research, drafting, monitoring, reconciliation &mdash; so the two cover
+          different failure modes and different hours of your week.
+        </p>
+        <ul class="svc-tags" role="list">
+          <li>Workflow design</li>
+          <li>Trigger &amp; metric</li>
+          <li>Ship in a week</li>
+        </ul>
+      </div>
+      <div class="svc-price">
+        <span class="price-label">DIY</span>
+        <span class="price-fig">yes</span>
+      </div>
+    </li>
+
+    <li class="svc">
+      <div class="svc-num">02</div>
+      <div class="svc-body">
+        <h3 class="svc-title">Wire in your real tools</h3>
+        <p class="svc-copy">
+          Gmail, Notion, CRM, calendar, file drops &mdash; the places your work already lives.
+          The workshop gave you the pattern; production adoption is mostly auth, scopes, and
+          sensible failure handling.
+        </p>
+        <ul class="svc-tags" role="list">
+          <li>OAuth &amp; scopes</li>
+          <li>Rate limits</li>
+          <li>Retries &amp; idempotency</li>
+        </ul>
+      </div>
+      <div class="svc-price">
+        <span class="price-label">DIY</span>
+        <span class="price-fig">mostly</span>
+      </div>
+    </li>
+
+    <li class="svc">
+      <div class="svc-num">03</div>
+      <div class="svc-body">
+        <h3 class="svc-title">Go multi-agent</h3>
+        <p class="svc-copy">
+          A planner, a researcher, a writer &mdash; each with a narrow job, coordinated. The
+          upgrade from single-agent automation to a small operating spine is where most of the
+          leverage actually lives, and where most DIY projects wobble.
+        </p>
+        <ul class="svc-tags" role="list">
+          <li>Role decomposition</li>
+          <li>Shared memory</li>
+          <li>Handoff contracts</li>
+        </ul>
+      </div>
+      <div class="svc-price">
+        <span class="price-label">Bring help</span>
+        <span class="price-fig">likely</span>
+      </div>
+    </li>
+
+    <li class="svc">
+      <div class="svc-num">04</div>
+      <div class="svc-body">
+        <h3 class="svc-title">Host it properly</h3>
+        <p class="svc-copy">
+          Private VPS, hardened server, private networking, monitored backups. If the agent is
+          now load-bearing for the business, it deserves the infrastructure equivalent of a
+          locked office door rather than a laptop under the desk.
+        </p>
+        <ul class="svc-tags" role="list">
+          <li>Private VPS</li>
+          <li>Tailscale</li>
+          <li>Managed backups</li>
+        </ul>
+      </div>
+      <div class="svc-price">
+        <span class="price-label">Bring help</span>
+        <span class="price-fig">yes</span>
+      </div>
+    </li>
+  </ol>
+
+  <p class="svc-foot">
+    &ldquo;DIY&rdquo; means you can finish it yourself with the workshop material and a weekend.
+    &ldquo;Bring help&rdquo; means you probably can &mdash; but the hours and trade-offs usually make it worth a conversation.
+  </p>
+</section>
+
+<hr class="rule">
+
+<section class="who pad" aria-labelledby="help-h">
+  <header class="sec-head" data-reveal>
+    <span class="sec-num">&sect;&nbsp;04</span>
+    <h2 id="help-h" class="sec-h">DIY, or bring us in.</h2>
+  </header>
+
+  <div class="who-grid" data-reveal>
+    <div class="who-copy">
+      <p>
+        The workshop is deliberately enough to let a confident builder keep going on their own.
+        Most attendees do, and it&rsquo;s a good outcome. We&rsquo;d rather you ship one small,
+        useful thing than buy consulting you don&rsquo;t need.
+      </p>
+      <p>
+        Where ELSOLVE earns its keep is later &mdash; when the agent becomes load-bearing, when
+        you want a small suite instead of a single tool, or when you&rsquo;d like the whole thing
+        designed, built, and handed back in a shape that keeps working after we&rsquo;ve gone.
+        A thirty-minute conversation is usually enough to know which side of the line you&rsquo;re on.
+      </p>
+    </div>
+    <aside class="who-list" aria-label="Signals that a conversation is worth it">
+      <dl>
+        <dt>The agent is load-bearing</dt>
+        <dd>If it going down would hurt your week, it deserves the right infrastructure.</dd>
+        <dt>You want more than one</dt>
+        <dd>Multi-agent is where DIY usually starts to cost more than it saves.</dd>
+        <dt>Your data is sensitive</dt>
+        <dd>Private hosting, hardened access, real boundaries &mdash; worth getting right first time.</dd>
+        <dt>You&rsquo;d rather buy the system</dt>
+        <dd>Some operators want the whole thing designed and built. That&rsquo;s a fair trade.</dd>
+      </dl>
+    </aside>
+  </div>
+</section>
+
+<hr class="rule">
+
+<section class="contact pad" id="contact" aria-labelledby="contact-h">
+  <header class="sec-head" data-reveal>
+    <span class="sec-num">&sect;&nbsp;05</span>
+    <h2 id="contact-h" class="sec-h">Take the next step.</h2>
+  </header>
+
+  <div class="contact-grid" data-reveal>
+    <div class="contact-copy">
+      <p class="contact-lede">
+        Tell us what you built, and what you want it to do next.
+      </p>
+      <p class="contact-hint">
+        Thirty minutes, no slides, no obligation. If the honest answer is
+        &ldquo;keep going on your own,&rdquo; we&rsquo;ll say so &mdash; and point you at the right bits of OpenClaw.
+      </p>
+    </div>
+
+    <div class="contact-actions">
+      <a class="btn-ink" href="mailto:adrian@elsolve.co.uk?subject=OpenClaw%20101%20%E2%80%94%20follow-up">
+        <span class="btn-label">Email Adrian</span>
+        <span class="btn-addr">adrian@elsolve.co.uk</span>
+        <span class="btn-arrow" aria-hidden="true">&#8599;</span>
+      </a>
+      <ul class="contact-meta" role="list">
+        <li><span>Other ways</span><span><a href="/links">All links &rarr;</a></span></li>
+        <li><span>Services</span><span><a href="/#services">Engagements &rarr;</a></span></li>
+        <li><span>Response</span><span>Within one working&nbsp;day</span></li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+</main>
+
+<footer class="foot">
+  <div class="pad foot-inner">
+    <div class="foot-col foot-brand">
+      <span class="foot-mark">Elsolve.</span>
+      <p>Practical AI and agentic systems for businesses that prefer quiet infrastructure to loud promises.</p>
+    </div>
+
+    <div class="foot-col">
+      <span class="foot-label">Practice</span>
+      <ul role="list">
+        <li><a href="/#approach">Approach</a></li>
+        <li><a href="/#services">Services</a></li>
+        <li><a href="/#engagements">Engagements</a></li>
+        <li><a href="/#contact">Contact</a></li>
+      </ul>
+    </div>
+
+    <div class="foot-col">
+      <span class="foot-label">Workshop</span>
+      <ul role="list">
+        <li><a href="/takeaway">OpenClaw 101 takeaway</a></li>
+        <li><a href="/links">Connect &amp; links</a></li>
+        <li>&copy; <span id="year">2026</span> ELSOLVE LTD</li>
+      </ul>
+    </div>
+  </div>
+</footer>
+
+<script src="/script.js" defer></script>
+</body>
+</html>
