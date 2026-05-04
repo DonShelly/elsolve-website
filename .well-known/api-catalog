@@ -1,0 +1,17 @@
+{
+  "linkset": [
+    {
+      "anchor": "https://elsolve.co.uk",
+      "service-doc": [
+        {
+          "href": "https://elsolve.co.uk",
+          "type": "text/html"
+        },
+        {
+          "href": "https://elsolve.co.uk/index.md",
+          "type": "text/markdown"
+        }
+      ]
+    }
+  ]
+}

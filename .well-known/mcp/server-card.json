@@ -1,0 +1,16 @@
+{
+  "serverInfo": {
+    "name": "ELSOLVE",
+    "version": "1.0.0",
+    "description": "ELSOLVE — A consultancy for AI as infrastructure. Practical AI and agentic systems for businesses."
+  },
+  "capabilities": {
+    "contact": {
+      "description": "Reach ELSOLVE via email at adrian@elsolve.co.uk to start a conversation about AI and agentic systems."
+    }
+  },
+  "links": {
+    "homepage": "https://elsolve.co.uk",
+    "contact": "mailto:adrian@elsolve.co.uk"
+  }
+}

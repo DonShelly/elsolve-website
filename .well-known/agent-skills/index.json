@@ -1,0 +1,12 @@
+{
+  "$schema": "https://agentskills.io/schema/v0.2.0/index.json",
+  "skills": [
+    {
+      "name": "elsolve-contact",
+      "type": "action",
+      "description": "Contact ELSOLVE to start a conversation about AI strategy, agentic systems design, or custom AI builds for your business.",
+      "url": "mailto:adrian@elsolve.co.uk",
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    }
+  ]
+}

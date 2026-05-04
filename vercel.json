@@ -12,9 +12,45 @@
       ]
     },
     {
+      "source": "/",
+      "headers": [
+        {
+          "key": "Link",
+          "value": "</.well-known/api-catalog>; rel=\"api-catalog\", </.well-known/mcp/server-card.json>; rel=\"describedby\", </.well-known/agent-skills/index.json>; rel=\"https://agentskills.io/rel/skills-index\""
+        }
+      ]
+    },
+    {
       "source": "/(styles\\.css|script\\.js|favicon\\.svg|og\\.svg)",
       "headers": [
         { "key": "Cache-Control", "value": "public, max-age=3600, stale-while-revalidate=86400" }
+      ]
+    },
+    {
+      "source": "/.well-known/api-catalog",
+      "headers": [
+        { "key": "Content-Type", "value": "application/linkset+json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/.well-known/mcp/:path*",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/.well-known/agent-skills/:path*",
+      "headers": [
+        { "key": "Content-Type", "value": "application/json" },
+        { "key": "Access-Control-Allow-Origin", "value": "*" }
+      ]
+    },
+    {
+      "source": "/index.md",
+      "headers": [
+        { "key": "Content-Type", "value": "text/markdown; charset=utf-8" }
       ]
     }
   ]
