@@ -47,9 +47,9 @@
             services: [
               { id: 1, title: 'AI Strategy Session', description: 'Workflow review, opportunity mapping, and next-step roadmap. Typically one to two weeks.', tags: ['Workflow review', 'Leverage mapping', 'Roadmap'] },
               { id: 2, title: 'Workflow & Systems Design', description: 'Business audit and implementation-ready blueprint for AI and agentic systems.', tags: ['Business audit', 'System architecture', 'Implementation plan'] },
-              { id: 3, title: 'Custom Agentic System Build', description: 'Bespoke agents and AI-supported operating systems — discovery through handover.', tags: ['Discovery', 'Custom architecture', 'Agent design', 'Deploy & handover'] },
+              { id: 3, title: 'Custom Agentic System Build', description: 'Bespoke agents and AI-supported operating systems - discovery through handover.', tags: ['Discovery', 'Custom architecture', 'Agent design', 'Deploy & handover'] },
               { id: 4, title: 'Ongoing Advisory & Optimisation', description: 'Monthly retainer for refinement, new use cases, and strategic support.', tags: ['Monthly optimisation', 'New use cases', 'Strategic support'] },
-              { id: 5, title: 'Deployment & Infrastructure', description: 'Private VPS hosting for AI stacks — hardened, monitored, managed backups.', tags: ['Private VPS', 'Tailscale & Samba', 'Managed backups', 'Monitoring'] },
+              { id: 5, title: 'Deployment & Infrastructure', description: 'Private VPS hosting for AI stacks - hardened, monitored, managed backups.', tags: ['Private VPS', 'Tailscale & Samba', 'Managed backups', 'Monitoring'] },
             ],
           }),
         },
