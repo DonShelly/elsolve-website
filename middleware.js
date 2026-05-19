@@ -1,10 +1,21 @@
-export default function middleware(request) {
+export default async function middleware(request) {
   const accept = request.headers.get('accept') || ''
 
   if (accept.includes('text/markdown')) {
     const url = new URL(request.url)
     url.pathname = '/index.md'
-    return Response.redirect(url.toString(), 302)
+    url.search = ''
+    const upstream = await fetch(url.toString(), {
+      headers: { 'cache-control': 'no-cache' },
+    })
+    return new Response(upstream.body, {
+      status: 200,
+      headers: {
+        'content-type': 'text/markdown; charset=utf-8',
+        'vary': 'accept',
+        'cache-control': 'public, max-age=0, must-revalidate',
+      },
+    })
   }
 }
 
